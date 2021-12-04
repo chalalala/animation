@@ -1,17 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
    [...document.querySelectorAll(".js-square")].forEach(square => {
       let animationType = square.getAttribute("animation-type");
-      const observer = new IntersectionObserver(entries => {
-         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-               entry.target.classList.add(animationType);
-            }
-            else {
-               entry.target.classList.remove(animationType);
-            }
-         });
-      });
-       
-      observer.observe(square);
+      window.addEventListener("scroll", () => {
+         if (square.getBoundingClientRect().top < window.innerHeight || document.documentElement.innerHeight) {
+            square.classList.add(animationType);
+         } else {
+            square.classList.remove(animationType);
+         }
+      })
    }) 
 })
