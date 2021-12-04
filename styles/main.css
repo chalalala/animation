@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&family=Lora:wght@700&display=swap");
+body {
+  font-family: "Karla", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lora", serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a {
+  color: #CAE2ED;
+}
+
+div {
+  color: #7FB3C8;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 144px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin: 20px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.fade-in {
+  -webkit-animation: 1s fade-in both;
+          animation: 1s fade-in both;
+}
+
+.fade-left {
+  -webkit-animation: 1s fade-left both;
+          animation: 1s fade-left both;
+}
+
+.fade-right {
+  -webkit-animation: 1s fade-right both;
+          animation: 1s fade-right both;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-left {
+  from {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-left {
+  from {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-right {
+  from {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  from {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#233238), color-stop(70.31%, #344A53), to(rgba(52, 74, 83, 0.95)));
+  background: linear-gradient(180deg, #233238 0%, #344A53 70.31%, rgba(52, 74, 83, 0.95) 100%);
+  margin: 0;
+}
+
+.scroll-down-icon {
+  font-size: 48px;
+  -webkit-animation: 1.5s fade-in linear infinite;
+          animation: 1.5s fade-in linear infinite;
+}
+
+.animation-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 90px;
+}
+
+.square {
+  background: #EDD8ED;
+  -webkit-box-shadow: 10px 10px 51px rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 10px 51px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+}
+
+header {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page-wrapper {
+  padding-left: 60px;
+  padding-right: 60px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+/*# sourceMappingURL=main.css.map */

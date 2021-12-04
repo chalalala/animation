@@ -1,0 +1,39 @@
+$animation-time: 1s;
+$animations: fade-in, fade-left, fade-right;
+
+@each $animation in $animations {
+   .#{$animation} {
+      animation: 1s $animation both; 
+   }
+}
+
+@keyframes fade-in {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+@keyframes fade-left {
+   from {
+      transform: translateX(50px);
+      opacity: 0;
+   }
+   to {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+
+@keyframes fade-right {
+   from {
+      transform: translateX(-50px);
+      opacity: 0;
+   }
+   to {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Lora:wght@700&display=swap');
+
+// Colors
+$primary-color: #CAE2ED;
+$secondary-color:#7FB3C8; 
+$accent-color: #EDD8ED;
+
+// Shadow
+$shadow: 10px 10px 51px rgba(0, 0, 0, 0.2);
+
+// Border radius
+$border-radius: 30px;
+
+// Typography
+$font-header: 'Lora', serif;
+$font-body: 'Karla', sans-serif;
+
+body {
+   font-family: $font-body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: $font-header;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a {
+   color: $primary-color;
+}
+
+div {
+   color: $secondary-color;
+}
+
+a {
+   text-decoration: none;
+}
+
+h1 {
+   font-weight: bold;
+   font-size: 144px;
+   text-align: center;
+   letter-spacing: 0.5px;
+   margin: 20px 0;
+}
+
+.text-center {
+   text-align: center;
+}

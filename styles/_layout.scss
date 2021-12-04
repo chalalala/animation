@@ -1,0 +1,19 @@
+header {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.page-wrapper {
+   padding-left: 60px;
+   padding-right: 60px;
+   max-width: 1440px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.row {
+   display: flex;
+   flex-flow: row wrap;
+}
