@@ -56,6 +56,11 @@ h1 {
           animation: 1s squishy;
 }
 
+.bounce {
+  -webkit-animation: 1s bounce;
+          animation: 1s bounce;
+}
+
 @-webkit-keyframes fade-in {
   from {
     opacity: 0;
@@ -195,6 +200,60 @@ h1 {
   100% {
     -webkit-transform: scale(1, 1) var(--square-rotate);
             transform: scale(1, 1) var(--square-rotate);
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(70px) var(--square-rotate);
+            transform: translateY(70px) var(--square-rotate);
+  }
+  60% {
+    -webkit-transform: translateY(0) var(--square-rotate);
+            transform: translateY(0) var(--square-rotate);
+  }
+  70% {
+    -webkit-transform: translateY(20px) var(--square-rotate);
+            transform: translateY(20px) var(--square-rotate);
+  }
+  80% {
+    -webkit-transform: translateY(0px) var(--square-rotate);
+            transform: translateY(0px) var(--square-rotate);
+  }
+  90% {
+    -webkit-transform: translateY(10px) var(--square-rotate);
+            transform: translateY(10px) var(--square-rotate);
+  }
+  100% {
+    -webkit-transform: translateY(0) var(--square-rotate);
+            transform: translateY(0) var(--square-rotate);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(70px) var(--square-rotate);
+            transform: translateY(70px) var(--square-rotate);
+  }
+  60% {
+    -webkit-transform: translateY(0) var(--square-rotate);
+            transform: translateY(0) var(--square-rotate);
+  }
+  70% {
+    -webkit-transform: translateY(20px) var(--square-rotate);
+            transform: translateY(20px) var(--square-rotate);
+  }
+  80% {
+    -webkit-transform: translateY(0px) var(--square-rotate);
+            transform: translateY(0px) var(--square-rotate);
+  }
+  90% {
+    -webkit-transform: translateY(10px) var(--square-rotate);
+            transform: translateY(10px) var(--square-rotate);
+  }
+  100% {
+    -webkit-transform: translateY(0) var(--square-rotate);
+            transform: translateY(0) var(--square-rotate);
   }
 }
 
