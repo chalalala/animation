@@ -24,6 +24,10 @@ body {
 
 .animation-row--left {
    --square-rotate: rotate(-6.78deg);
+
+   .animation-name {
+      margin-left: 90px;
+   }
 }
 
 .animation-row--right {
@@ -32,11 +36,11 @@ body {
    .animation-name {
       order: -1;
       text-align: right;
+      margin-right: 90px;
    }
 }
 
 .animation-name {
-   margin-left: 90px;
    width: 300px;
    max-width: 100%;
 }

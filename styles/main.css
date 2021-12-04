@@ -294,6 +294,10 @@ body {
   --square-rotate: rotate(-6.78deg);
 }
 
+.animation-row--left .animation-name {
+  margin-left: 90px;
+}
+
 .animation-row--right {
   --square-rotate: rotate(6.78deg);
 }
@@ -303,10 +307,10 @@ body {
       -ms-flex-order: -1;
           order: -1;
   text-align: right;
+  margin-right: 90px;
 }
 
 .animation-name {
-  margin-left: 90px;
   width: 300px;
   max-width: 100%;
 }
