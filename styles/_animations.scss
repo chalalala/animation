@@ -1,5 +1,5 @@
 $animation-time: 1s;
-$animations: fade-in, fade-left, fade-right, zoom-in, squishy, bounce;
+$animations: fade-in, fade-left, fade-right, zoom-in, zoom-out, squishy, bounce, swing;
 
 @each $animation in $animations {
    .#{$animation} {
@@ -49,6 +49,18 @@ $animations: fade-in, fade-left, fade-right, zoom-in, squishy, bounce;
    }
 }
 
+@keyframes zoom-out {
+   from {
+      transform: scale(1) var(--square-rotate);
+      opacity: 1;
+   }
+   to {
+      transform-origin: top;
+      transform: scale(0) var(--square-rotate);
+      opacity: 0;
+   }
+}
+
 @keyframes squishy {
    0% {
       transform: scale(1, 1) var(--square-rotate);
@@ -85,5 +97,23 @@ $animations: fade-in, fade-left, fade-right, zoom-in, squishy, bounce;
    }
    100% {
       transform: translateY(0) var(--square-rotate);
+   }
+}
+
+@keyframes swing {
+   0% {
+      transform: rotate(0);
+   }
+   70% {
+      transform: rotate(20deg);
+   }
+   80% {
+      transform: rotate(-30deg);
+   }
+   90% {
+      transform: rotate(20deg);
+   }
+   100% {
+      transform: var(--square-rotate);
    }
 }

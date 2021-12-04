@@ -51,6 +51,11 @@ h1 {
           animation: 1s zoom-in;
 }
 
+.zoom-out {
+  -webkit-animation: 1s zoom-out;
+          animation: 1s zoom-out;
+}
+
 .squishy {
   -webkit-animation: 1s squishy;
           animation: 1s squishy;
@@ -59,6 +64,11 @@ h1 {
 .bounce {
   -webkit-animation: 1s bounce;
           animation: 1s bounce;
+}
+
+.swing {
+  -webkit-animation: 1s swing;
+          animation: 1s swing;
 }
 
 @-webkit-keyframes fade-in {
@@ -154,6 +164,36 @@ h1 {
     -webkit-transform: scale(1) var(--square-rotate);
             transform: scale(1) var(--square-rotate);
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes zoom-out {
+  from {
+    -webkit-transform: scale(1) var(--square-rotate);
+            transform: scale(1) var(--square-rotate);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transform: scale(0) var(--square-rotate);
+            transform: scale(0) var(--square-rotate);
+    opacity: 0;
+  }
+}
+
+@keyframes zoom-out {
+  from {
+    -webkit-transform: scale(1) var(--square-rotate);
+            transform: scale(1) var(--square-rotate);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transform: scale(0) var(--square-rotate);
+            transform: scale(0) var(--square-rotate);
+    opacity: 0;
   }
 }
 
@@ -254,6 +294,52 @@ h1 {
   100% {
     -webkit-transform: translateY(0) var(--square-rotate);
             transform: translateY(0) var(--square-rotate);
+  }
+}
+
+@-webkit-keyframes swing {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  70% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  80% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+  90% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: var(--square-rotate);
+            transform: var(--square-rotate);
+  }
+}
+
+@keyframes swing {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  70% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  80% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+  90% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: var(--square-rotate);
+            transform: var(--square-rotate);
   }
 }
 
