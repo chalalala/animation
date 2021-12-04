@@ -1,5 +1,5 @@
 $animation-time: 1s;
-$animations: fade-in, fade-left, fade-right, zoom-in, zoom-out, squishy, bounce, swing;
+$animations: fade-in, fade-left, fade-right, zoom-in, zoom-out, squishy, bounce, swing, flip-in-x, flip-in-y;
 
 @each $animation in $animations {
    .#{$animation} {
@@ -115,5 +115,29 @@ $animations: fade-in, fade-left, fade-right, zoom-in, zoom-out, squishy, bounce,
    }
    100% {
       transform: var(--square-rotate);
+   }
+}
+
+@keyframes flip-in-x {
+   0% {
+      transform: scaleY(0);
+      opacity: 0;
+   }
+   100% {
+      transform-origin: center;
+      transform: scaleY(1) var(--square-rotate);
+      opacity: 1;
+   }
+}
+
+@keyframes flip-in-y {
+   0% {
+      transform: scaleX(0);
+      opacity: 0;
+   }
+   100% {
+      transform-origin: center;
+      transform: scaleX(1) var(--square-rotate);
+      opacity: 1;
    }
 }

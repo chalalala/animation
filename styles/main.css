@@ -71,6 +71,16 @@ h1 {
           animation: 1s swing;
 }
 
+.flip-in-x {
+  -webkit-animation: 1s flip-in-x;
+          animation: 1s flip-in-x;
+}
+
+.flip-in-y {
+  -webkit-animation: 1s flip-in-y;
+          animation: 1s flip-in-y;
+}
+
 @-webkit-keyframes fade-in {
   from {
     opacity: 0;
@@ -340,6 +350,66 @@ h1 {
   100% {
     -webkit-transform: var(--square-rotate);
             transform: var(--square-rotate);
+  }
+}
+
+@-webkit-keyframes flip-in-x {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scaleY(1) var(--square-rotate);
+            transform: scaleY(1) var(--square-rotate);
+    opacity: 1;
+  }
+}
+
+@keyframes flip-in-x {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scaleY(1) var(--square-rotate);
+            transform: scaleY(1) var(--square-rotate);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes flip-in-y {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scaleX(1) var(--square-rotate);
+            transform: scaleX(1) var(--square-rotate);
+    opacity: 1;
+  }
+}
+
+@keyframes flip-in-y {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scaleX(1) var(--square-rotate);
+            transform: scaleX(1) var(--square-rotate);
+    opacity: 1;
   }
 }
 
