@@ -66,52 +66,52 @@ h1 {
 
 @-webkit-keyframes fade-left {
   from {
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
+    -webkit-transform: translateX(50px) var(--square-rotate);
+            transform: translateX(50px) var(--square-rotate);
     opacity: 0;
   }
   to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateX(0) var(--square-rotate);
+            transform: translateX(0) var(--square-rotate);
     opacity: 1;
   }
 }
 
 @keyframes fade-left {
   from {
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
+    -webkit-transform: translateX(50px) var(--square-rotate);
+            transform: translateX(50px) var(--square-rotate);
     opacity: 0;
   }
   to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateX(0) var(--square-rotate);
+            transform: translateX(0) var(--square-rotate);
     opacity: 1;
   }
 }
 
 @-webkit-keyframes fade-right {
   from {
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
+    -webkit-transform: translateX(-50px) var(--square-rotate);
+            transform: translateX(-50px) var(--square-rotate);
     opacity: 0;
   }
   to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateX(0) var(--square-rotate);
+            transform: translateX(0) var(--square-rotate);
     opacity: 1;
   }
 }
 
 @keyframes fade-right {
   from {
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
+    -webkit-transform: translateX(-50px) var(--square-rotate);
+            transform: translateX(-50px) var(--square-rotate);
     opacity: 0;
   }
   to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateX(0) var(--square-rotate);
+            transform: translateX(0) var(--square-rotate);
     opacity: 1;
   }
 }
@@ -132,11 +132,46 @@ body {
           animation: 1.5s fade-in linear infinite;
 }
 
-.animation-info {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.animation-row + .animation-row {
+  margin-top: 164px;
+}
+
+.animation-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.animation-row--left {
+  --square-rotate: rotate(-6.78deg);
+}
+
+.animation-row--right {
+  --square-rotate: rotate(6.78deg);
+}
+
+.animation-row--right .animation-name {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  text-align: right;
+}
+
+.animation-name {
   margin-left: 90px;
+  width: 300px;
+  max-width: 100%;
+}
+
+.animation-type + .animation-type {
+  margin-left: 20px;
 }
 
 .square {
@@ -147,6 +182,8 @@ body {
   width: 300px;
   height: 300px;
   margin: 20px;
+  -webkit-transform: var(--square-rotate);
+          transform: var(--square-rotate);
 }
 
 header {
@@ -169,15 +206,5 @@ header {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
 }
 /*# sourceMappingURL=main.css.map */

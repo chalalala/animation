@@ -3,6 +3,7 @@
       <title>Animation Showcase</title>
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link href="styles/main.css" rel="stylesheet">
+      <script src="animation.js"></script>
    </head>
 
    <body>
@@ -18,23 +19,19 @@
 
       <main>
          <div class="page-wrapper" id="Content">
-            <div class="row">
-               <div class="square rotate-left large fade-left"></div>
-               <div class="animation-info">
-                  <h2 class="animation-info__title">Fade</h2>
-                  
-                  <div class="row">
-                     <div class="animation-type">
-                        <label for="left">Left</label>
-                        <input type="radio" name="fade-type" id="fade-type" value="left" checked>
-                     </div>
+            <div class="animation-row animation-row--left">
+               <div class="square js-square" animation-type="fade-in"></div>
+               <h2 class="animation-name">Fade in</h2>
+            </div>
 
-                     <div class="animation-type">
-                        <label for="right">Right</label>
-                        <input type="radio" name="fade-type" id="fade-type" value="right">
-                     </div>
-                  </div>
-               </div>
+            <div class="animation-row animation-row--right">
+               <div class="square js-square" animation-type="fade-left"></div>
+               <h2 class="animation-name">Fade left</h2>
+            </div>
+
+            <div class="animation-row animation-row--left">
+               <div class="square large js-square" animation-type="fade-right"></div>
+               <h2 class="animation-name">Fade right</h2>
             </div>
          </div>
       </main>

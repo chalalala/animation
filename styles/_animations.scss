@@ -18,22 +18,22 @@ $animations: fade-in, fade-left, fade-right;
 
 @keyframes fade-left {
    from {
-      transform: translateX(50px);
+      transform: translateX(50px) var(--square-rotate);
       opacity: 0;
    }
    to {
-      transform: translateX(0);
+      transform: translateX(0) var(--square-rotate);
       opacity: 1;
    }
 }
 
 @keyframes fade-right {
    from {
-      transform: translateX(-50px);
+      transform: translateX(-50px) var(--square-rotate);
       opacity: 0;
    }
    to {
-      transform: translateX(0);
+      transform: translateX(0) var(--square-rotate);
       opacity: 1;
    }
 }

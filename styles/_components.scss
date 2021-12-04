@@ -12,9 +12,37 @@ body {
    animation: 1.5s fade-in linear infinite;
 }
 
-.animation-info {
-   flex: 1;
+.animation-row + .animation-row {
+   margin-top: 164px;
+}
+
+.animation-row {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+}
+
+.animation-row--left {
+   --square-rotate: rotate(-6.78deg);
+}
+
+.animation-row--right {
+   --square-rotate: rotate(6.78deg);
+
+   .animation-name {
+      order: -1;
+      text-align: right;
+   }
+}
+
+.animation-name {
    margin-left: 90px;
+   width: 300px;
+   max-width: 100%;
+}
+
+.animation-type + .animation-type {
+   margin-left: 20px;
 }
 
 .square {
@@ -24,11 +52,5 @@ body {
    width: 300px;
    height: 300px;
    margin: 20px;
-
-   // &.rotate-left {
-   //    transform: rotate(-6.78deg);
-   // }
-   // &.rotate-right {
-   //    transform: matrix(-1, 0, 0, 1, 0, 0);
-   // }
+   transform: var(--square-rotate);
 }
