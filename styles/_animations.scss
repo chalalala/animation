@@ -1,9 +1,9 @@
 $animation-time: 1s;
-$animations: fade-in, fade-left, fade-right, zoom-in;
+$animations: fade-in, fade-left, fade-right, zoom-in, squishy;
 
 @each $animation in $animations {
    .#{$animation} {
-      animation: 1s $animation both; 
+      animation: 1s $animation; 
    }
 }
 
@@ -46,5 +46,23 @@ $animations: fade-in, fade-left, fade-right, zoom-in;
    to {
       transform: scale(1) var(--square-rotate);
       opacity: 1;
+   }
+}
+
+@keyframes squishy {
+   0% {
+      transform: scale(1, 1) var(--square-rotate);
+   }
+   70% {
+      transform: scale(1.2, 0.8) var(--square-rotate);
+   }
+   80% {
+      transform: scale(1, 1) var(--square-rotate);
+   }
+   90% {
+      transform: scale(1.2, 0.9) var(--square-rotate);
+   }
+   100% {
+      transform: scale(1, 1) var(--square-rotate);
    }
 }
