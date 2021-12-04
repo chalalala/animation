@@ -1,5 +1,5 @@
 $animation-time: 1s;
-$animations: fade-in, fade-left, fade-right;
+$animations: fade-in, fade-left, fade-right, zoom-in;
 
 @each $animation in $animations {
    .#{$animation} {
@@ -34,6 +34,17 @@ $animations: fade-in, fade-left, fade-right;
    }
    to {
       transform: translateX(0) var(--square-rotate);
+      opacity: 1;
+   }
+}
+
+@keyframes zoom-in {
+   from {
+      transform: scale(0) var(--square-rotate);
+      opacity: 0;
+   }
+   to {
+      transform: scale(1) var(--square-rotate);
       opacity: 1;
    }
 }
